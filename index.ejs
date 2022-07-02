@@ -2,6 +2,68 @@
 layout: main.ejs
 title: CSSS Frosh Week 2022!
 description: Frosh Week 2022 home page.
+questionList:
+    - title: Is Frosh Week worth it?
+      answer: Absolutely! Frosh Week is <em>the best week</em> of your undergraduate life at SFU. It is an amazing way to instantly make friends and get involved with our community!
+    - title: What is the difference between Frosh Week and SFU Welcome Day?
+      answer: Welcome Day is the official SFU orientation for new students. You will meet your Welcome Leader, a student who may or may not be in Computing Science, and a group of ~15 other Faculty of Applied Science students. Welcome Day is useful for finding your way around campus and learning about the official SFU resources you'll use during your degree. Frosh Week is pure, unadulterated FUN for all CS students! You will meet knowledgeable upper-year students and your fellow first years. You will learn things that the Welcome Leaders are not allowed to tell you. You will compete for awesome prizes and receive loads of free food! Frosh Week is the easiest way to make new connections and offers an experience that greatly surpasses what you will get at Welcome Day.
+    - title: Do I need to go to every event?
+      answer: You do not have to, but we highly recommend that going to all events in order to get the most food, have the most fun, and meet the most people. 
+    - title: I can't make it to an event. Can I join late or leave early?
+      answer: Yes. If you need to leave early, let a Frosh Leader know. If you need to join an event late, please find out beforehand where we will be as some events will move around to different areas. 
+    - title: What is the best way to get more information about Frosh Week?
+      answer:
+    - title: How much does Frosh Week cost?
+      answer: Frosh Week is <em>100% FREE</em>!
+    - title: What if I don't know anyone?
+      answer: Don't worry! Everyone is looking for cool people to know better! Introduce yourself, be curious, and have a great week with your new friends!
+    - title: This is not my first year at SFU / I am not a Computing Science major. Can I still come?
+      answer: "Absolutely! Frosh Week is more than an orientation: it is an opportunity to network, relax, and have fun!"
+    - title: I am located at the Surrey campus, can I still come to Frosh Week?
+      answer: Yes, Frosh Week is open to all students but on-campus events will be held at the SFU Burnaby campus. Our fellow Applied Science student unions for Software Systems (link), Mechatronics System Engineering (link), and Sustainable Energy Engineering (link) run events at the Surrey campus.
+eventList:
+    - name: Ice Cream Social
+      date: September 12 (Monday)
+      start: ""
+      end: ""
+      location: TBD
+      description: TBD
+    - name: Burnaby Mountain Hike
+      date: September 13 (Tuesday)
+      start: ""
+      end: ""
+      location: TBD
+      description: TBD
+    - name: Board Games and BBQ
+      date: September 14 (Wednesday)
+      start: ""
+      end: ""
+      location: TBD
+      description: TBD
+    - name: CS Info Session
+      date: September 15 (Thursday)
+      start: ""
+      end: ""
+      location: TBD
+      description: TBD
+    - name: PAC MACRO
+      date: September 15 (Thursday)
+      start: ""
+      end: ""
+      location: TBD
+      description: TBD
+    - name: Dinner
+      date: September 15 (Thursday)
+      start: ""
+      end: ""
+      location: TBD
+      description: TBD
+    - name: Midnight Madness
+      date: September 16 (Friday)
+      start: ""
+      end: ""
+      location: TBD
+      description: TBD
 ---
 <section>
     <h1>Frosh Week 2022</h1>
@@ -13,9 +75,28 @@ description: Frosh Week 2022 home page.
     <p>Filler text about the CSSS</p>
 </section>
 <a href="">Join our Discord Server</a>
-<section>
+<section id="events">
     <!--Calendar + events description -->
+    <% eventList.forEach(event => { %>
+        <%- include('_includes/event.ejs', {
+            eventname: event.name,
+            date: event.date,
+            start: event.start,
+            end: event.end,
+            location: event.location,
+            description: event.description
+        }) %>
+    <% }) %>
 </section>
+<section id="faq">
+    <% questionList.forEach(qa => { %>
+        <%- include('_includes/faq.ejs', {
+            question: qa.title,
+            answer: qa.answer
+        }) %>
+    <% }) %>
+</section>
+
 <section>
     <!-- Sponsors -->
 </section>
