@@ -64,17 +64,23 @@ eventList:
       end: ""
       location: TBD
       description: TBD
+about: "<p>The Simon Fraser University Computing Science Student Society (CSSS) represents over 2000 students who are doing a Computing Science Major, Minor, Honours or are taking a Computing Science class. The CSSS strives to provide the best university experience possible for all of our members. We run academic and career-focused events such as hackathons, software and resume review workshops, and an annual job fair. We also orchestrate fun events such as Board Games Nights, socials, and Frosh Week!</p>"
+aboutFrosh: "<p>Frosh Week is the ultimate welcome experience for Computing Science students at SFU.</p><p>Organized by the Computing Science Student Society (CSSS), Frosh Week is a jam-packed week of fun activities that orients, entertains, and educates incoming university students with a CS twist.</p><p>Held during the second week of the Fall semester at SFU (Sept. 12-16), Frosh Week is organized by students, for students. Incoming students will receive valuable course, career, and transition-to-university advice from their elders; participate in challenges to triumph, amuse, and connect with other students; and get free food and merchandise!</p>"
 ---
 <section>
     <h1>Frosh Week 2022</h1>
     <p>Filler text about Candy Frosh</p> 
 </section>
-<a>Signup</a>
+    <a>Signup</a>
+    <a>Join our Discord Server</a>
 <section>
     <h2>What is the CSSS?</h2>
-    <p>Filler text about the CSSS</p>
+    <%- about %>
 </section>
-<a href="">Join our Discord Server</a>
+<section>
+    <h2>What is Frosh?</h2>
+    <p><%- aboutFrosh %></p>
+</section>
 <section id="events">
     <!--Calendar + events description -->
     <% eventList.forEach(event => { %>
