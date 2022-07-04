@@ -39,12 +39,6 @@ em {
     color: rgb(14, 24, 207);
 }
 
-
-.outer-2-col {
-    max-width: 180ch;
-}
-
-
 .subheading {
     max-width: 60ch;
 }
@@ -53,6 +47,7 @@ em {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    max-width: 180ch;
 }
 
 .inner-2-col > * {
