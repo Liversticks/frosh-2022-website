@@ -1,11 +1,60 @@
+.stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.stack > * {
+    margin: 0 auto;
+}
+
 .stack > * + * {
     margin-block-start: 1.5rem;
 }
 
+.center {
+    box-sizing: content-box;
+    display: block;
+    margin: 0 auto;
+}
+
 html {
     font-family: 'Source Serif Pro', serif;
+    background-color: rgb(245, 218, 234);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    max-width: 75ch;
+    min-width: 35ch;
+    line-height: 150%;
+}
+
+em {
+    font-style: normal;
+    font-weight: bolder;
+    color: rgb(14, 24, 207);
+}
+
+
+.outer-2-col {
+    max-width: 180ch;
+}
+
+
+.subheading {
+    max-width: 60ch;
+}
+
+.inner-2-col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.inner-2-col > * {
+    flex: 1 75ch;
 }
