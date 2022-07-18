@@ -1,10 +1,9 @@
-<article>
+<li>
     <h3><%= eventname %></h3>
-    <ul>
-        <li>Date: <%= date %></li>
-        <li>Start: <%= start %></li>
-        <li>End: <%= end %></li>
-        <li>Location: <%= location %></li>
+    <ul class="fa-ul event-details">
+        <li><span class="fa-li"><i class="fa-solid fa-calendar-days"></i></span>Date: <%= date %></li>
+        <li><span class="fa-li"><i class="fa-solid fa-clock"></i></span>Time: <%= time %></li>
+        <li><span class="fa-li"><i class="fa-solid fa-map-location-dot"></i></span>Location: <%= location %></li>
     </ul>
     <p><%- description %></p>
-</article>
+</li>
