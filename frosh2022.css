@@ -18,6 +18,11 @@
     margin: 0 auto;
 }
 
+main.stack {
+    padding-left: 5ch;
+    padding-right: 5ch;
+}
+
 html {
     font-family: 'Source Serif Pro', serif;
     background-color: rgb(245, 218, 234);
@@ -27,10 +32,18 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
 }
 
+h2 {
+    font-size: 36px;
+}
+
 p {
     max-width: 75ch;
     min-width: 35ch;
     line-height: 150%;
+}
+
+a {
+    text-decoration: none;
 }
 
 em {
@@ -43,13 +56,49 @@ em {
     max-width: 60ch;
 }
 
-.inner-2-col {
-    display: flex;
+.signup-list {
+    display: inline-flex;
     flex-wrap: wrap;
+    gap: 16px;
     justify-content: space-around;
-    max-width: 180ch;
+    list-style-type: none;
+    padding: 0;
 }
 
-.inner-2-col > * {
-    flex: 1 75ch;
+a.signup-link:hover {
+    text-decoration: none;
+}
+
+.signup-box {
+    height: 256px;
+    width: 256px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+    background-color: rgb(178, 210, 235);
+    border-radius: 16px;
+}
+
+.signup-box span {
+    color: rgb(7, 22, 36);
+}
+
+footer {
+    text-align: center;
+}
+
+footer hr {
+    height: 2px;
+    background-color: rgb(7, 22, 36);
+}
+
+.event-details li:not(:last-child) {
+    margin-bottom: 0.5ch;
+}
+
+.card-list {
+    list-style-type: none;
+    padding: 0;
 }

@@ -24,83 +24,108 @@ questionList:
 eventList:
     - name: Ice Cream Social
       date: September 12 (Monday)
-      start: 1 pm
-      end: ""
-      location: ASB Atrium
-      description: Start your second week strong by meeting your peers who will be your classmates for the next 4+ years and getting your Frosh swag! Mentors will also be around to ask for advice and help you with your questions. Don't forget the ICE CREAM!!!
+      time: "13:00 - "
+      location: SFU Burnaby, ASB Atrium
+      description: Start your second week strong by meeting your peers who will be your classmates for the next 4+ years and getting your Frosh swag! Mentors will also be around to ask for advice and help you with your questions. Don't forget that we'll be serving ICE CREAM!!!
     - name: Burnaby Mountain Hike
       date: September 13 (Tuesday)
-      start: 12 pm
-      end: 3 pm
+      time: "12:00 - 15:00"
       location: TBD
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     - name: Board Games and BBQ
       date: September 14 (Wednesday)
-      start: 5:30 pm
-      end: 10 pm
+      time: "17:30 - 22:00"
       location: TASC 9204
       description: Get a glimpse of our biweekly Board Games! We have a wide assortment of board, card, and party games for you. We will also be serving delicious hamburgers, hot dogs, and more made by your fellow CS students!
     - name: CS Info Session
       date: September 15 (Thursday)
-      start: ""
-      end: ""
+      time: ""
       location: TBD
       description: Learn about the opportunities available to you to build your path for the next 4+ years and get your burning questions answered! Speakers hail from the School of Computing Science, CS Co-op, Women in Computing Science (WiCS), and the Computing Science Student Society (CSSS, us!). 
     - name: PAC MACRO
       date: September 15 (Thursday)
-      start: ""
-      end: ""
+      time: ""
       location: TBD
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     - name: Dinner
       date: September 15 (Thursday)
-      start: ""
-      end: ""
+      time: ""
       location: TBD
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     - name: Midnight Madness
       date: September 16 (Friday)
-      start: ""
-      end: ""
+      time: ""
       location: TBD
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 about: "<p>The Simon Fraser University <em>Computing Science Student Society (CSSS)</em> represents over 2000 students who are doing a Computing Science Major, Minor, Honours or are taking a Computing Science class. The CSSS strives to provide the best university experience possible for all of our members. We run academic and career-focused events such as hackathons, software and resume review workshops, and an annual job fair. We also orchestrate fun events such as Board Games Nights, socials, and Frosh Week!</p>"
 aboutFrosh: "<p><em>Frosh Week</em> is the ultimate welcome experience for Computing Science students at SFU.</p><p>Organized by the CSSS, Frosh Week is a jam-packed week of fun activities that orients, entertains, and educates incoming university students with a CS twist.</p><p>Held during the <em>second week of the Fall semester at SFU (Sept. 12-16)</em>, Frosh Week is organized by students, for students. Incoming students will receive valuable course, career, and transition-to-university advice from their elders; participate in challenges to triumph, amuse, and connect with other students; and get free food and merchandise!</p>"
 code: <p>The Computing Science Student Society (CSSS) aims to promote the interests of all students in the School of Computing Science at SFU. At Frosh Week, the CSSS is dedicated to providing a harassment-free experience for everyone regardless of gender, disability, age, ethnic origin, religion, or other personal attributes. We do not tolerate harassment of any member of the university community in any form. </p><p>Harassment includes, but is not limited to:</p><ul><li>Deliberate intimidation, stalking, or following</li><li>Inappropriate physical contact</li><li>Harassing photography or recording</li><li>Sustained disruption of events</li><li>Unwelcome sexual attention</li><li>Advocating for, or encouraging, any of the above behaviour</li></ul><p>If a participant engages in harassing behaviour, event organizers retain the right to take any actions to keep the event a welcoming environment for all participants.</p>
+signups:
+  - signupLink: "https://forms.google.com"
+    icon: fa-solid fa-pen-to-square fa-4x
+    flavor: Froshee Registration
+  - signupLink: "https://forms.google.com"
+    icon: fa-regular fa-pen-to-square fa-4x
+    flavor: Frosh Leader Registration
+  - signupLink: "https://discord.gg/sfucsss"
+    icon: fa-brands fa-discord fa-4x
+    flavor: Join our Discord Server
 ---
 <section class="center">
     <h1>Frosh Week 2022</h1>
     <p>Filler text about Candy Frosh</p> 
 </section>
-    <a>Signup</a>
-    <a>Join our Discord Server</a>
+  <section class="center">
+    <ul class="signup-list">
+    <% signups.forEach(link => { %>
+      <li>  
+        <%- include('_includes/signup-button.ejs', {
+          signupLink: link.signupLink,
+          icon: link.icon,
+          flavor: link.flavor
+        }) %>
+      </li>
+      <% }) %>    
+    </ul>
+  </section> 
 <section>
-    <h2>What is the CSSS?</h2>
+  <%- include('_includes/heading.ejs', {
+    heading: 2,
+    contents: "What is the CSSS?"
+  }) %> 
     <%- about %>
 </section>
 <section>
-    <h2>What is Frosh?</h2>
+  <%- include('_includes/heading.ejs', {
+    heading: 2,
+    contents: "What is Frosh?"
+  }) %> 
     <%- aboutFrosh %>
 </section>
 <section id="events" class="outer-2-col">
-    <h2>Frosh Events</h2>
-    <section class="inner-2-col">
+  <%- include('_includes/heading.ejs', {
+    heading: 2,
+    contents: "Frosh Events"
+  }) %>   
+    <ol class="card-list stack">
     <!--Calendar + events description -->
     <% eventList.forEach(event => { %>
         <%- include('_includes/event.ejs', {
             eventname: event.name,
             date: event.date,
-            start: event.start,
-            end: event.end,
+            time: event.time,
             location: event.location,
             description: event.description
         }) %>
     <% }) %>
-    </section>
+    </ul>
 </section>
 <section id="faq" class="outer-2-col">
-    <h2>Frequently Asked Questions</h2>
-    <section class="inner-2-col">
+  <%- include('_includes/heading.ejs', {
+    heading: 2,
+    contents: "Frequently Asked Questions"
+  }) %>   
+    <section>
     <% questionList.forEach(qa => { %>
         <%- include('_includes/faq.ejs', {
             question: qa.title,
@@ -114,8 +139,11 @@ code: <p>The Computing Science Student Society (CSSS) aims to promote the intere
     <!-- Sponsors -->
 </section>
 <section id="code-of-conduct">
-    <h2>Code of Conduct</h2>
-    <%- code %>
+  <%- include('_includes/heading.ejs', {
+    heading: 2,
+    contents: "Code of Conduct"
+  }) %>  
+  <%- code %>
 </section>
 <%- include('_includes/footer.ejs') %>
 
