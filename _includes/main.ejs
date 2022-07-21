@@ -16,9 +16,42 @@ siteTitle: CSSS Frosh Week 2022!
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Serif+Pro&display=swap" rel="stylesheet">
 </head>
 <script src="https://kit.fontawesome.com/8a06a8d793.js" crossorigin="anonymous"></script>
-<body>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src="/bootstrap.min-scrollspy-collapse-transitions.js"></script>
+<body data-spy="scroll" data-target="#navbar-parent">
     <main class="stack">
         <%- content %>
     </main>
+    <script>
+        $(document).ready(() => {
+            $('body').scrollspy({ target: ".navbar", offset: 50 });
+
+            // From Frosh 2018 website
+            // Add smooth scrolling on all links inside the navbar
+            $("#myNavbar a").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                }  // End if
+            });
+        });
+    </script>
 </body>
 </html>
