@@ -25,19 +25,42 @@ main.stack {
 
 html {
     font-family: 'Source Serif Pro', serif;
-    background-color: rgb(240, 222, 233);
+    background-color: rgb(241, 231, 237);
 }
 
 body {
     position: relative;
 }
 
+#logo {
+  max-width: min(75ch, 100%);
+  min-width: 35ch;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
 }
 
+h1 {
+    font-size: min(64px, 12vw);
+    text-align: center;
+    margin-bottom: 0;
+    color: rgb(146, 27, 161);
+    text-shadow:
+       3px 3px 0 rgb(15, 14, 15),
+     -1px -1px 0 rgb(116, 25, 128),  
+      1px -1px 0 rgb(15, 14, 15),
+      -1px 1px 0 rgb(15, 14, 15),
+       1px 1px 0 rgb(15, 14, 15);
+}
+
 h2 {
     font-size: 36px;
+    color:rgb(81, 11, 90);
+}
+
+h3 {
+  color:rgb(119, 14, 133);
 }
 
 p {
@@ -81,11 +104,12 @@ a.signup-link:hover {
     justify-content: center;
     text-align: center;
     font-size: 32px;
-    background-color: rgb(178, 210, 235);
+    background-color: rgb(86, 166, 226);
+    color: rgb(212, 212, 218);
     border-radius: 16px;
 }
 
-.signup-box span {
+.signup-box span i {
     color: rgb(7, 22, 36);
 }
 
@@ -130,9 +154,14 @@ button.navbar-toggle:hover {
 }
 
 #home {
-    /* sucks that these values are hard-coded :( */
-    padding-top: 200px;
-    padding-bottom: 100px;
+    padding-top: 80px;
+}
+
+#home p {
+  text-align: center;
+  font-size: larger;
+  font-style: italic;
+  max-width: 100%;
 }
 
 .csss_frosh_logo {
@@ -157,6 +186,18 @@ button.navbar-toggle:hover {
   height: 100%;
 }
 
+.fa-calendar-days {
+  color: rgb(197, 22, 37);
+}
+
+.fa-clock {
+  color: rgb(192, 91, 9);
+}
+
+.fa-map-location-dot {
+  color:rgb(82, 207, 51);
+}
+
 @media (max-width: 700px) {
   .hidden-phone {
     display: none;
@@ -175,6 +216,23 @@ button.navbar-toggle:hover {
   border: 2px solid rgb(21, 151, 60);
   padding: 6px 12px;
   border-radius: 4px;
+}
+
+#sponsor-list {
+  list-style-type: none;
+  padding: 0;
+  line-height: 50px;
+  justify-content: center;
+  display: flex;
+  max-width: 75ch;
+  flex-wrap: wrap;
+}
+
+#sponsor-list * {
+  margin: auto;
+}
+.sponsor-image {
+  max-width: 90%;
 }
 
 .code-of-conduct-items {
