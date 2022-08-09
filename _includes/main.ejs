@@ -23,16 +23,16 @@ siteTitle: CSSS Frosh Week 2022!
     <meta name="msapplication-config" content="frosh_static/2022/images/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
-<script src="https://kit.fontawesome.com/8a06a8d793.js" crossorigin="anonymous"></script>
-<script
+<body data-spy="scroll" data-target="#navbar-parent">
+    <script src="https://kit.fontawesome.com/8a06a8d793.js" crossorigin="anonymous"></script>
+    <main class="stack">
+        <%- content %>
+    </main>
+    <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
 <script src="/bootstrap.min-scrollspy-collapse-transitions.js"></script>
-<body data-spy="scroll" data-target="#navbar-parent">
-    <main class="stack">
-        <%- content %>
-    </main>
     <script>
         $(document).ready(() => {
             $('body').scrollspy({ target: ".navbar", offset: 50 });

@@ -155,10 +155,10 @@ flavor: Something sweet is coming!
     https://stackoverflow.com/questions/17838607/making-an-iframe-responsive
   -->
   <div class="responsive-frame hidden-phone">
-    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=America%2FVancouver&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&mode=WEEK&src=bWw1cjNvbm1kOHI1aW9saGdtbnE0azZuYjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F4511E&dates=20220912/20220917" style="border:solid 1px #777" width="600" height="600" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=America%2FVancouver&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&mode=WEEK&src=bWw1cjNvbm1kOHI1aW9saGdtbnE0azZuYjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F4511E&dates=20220912/20220917" style="border:solid 1px #777" width="600" height="600"></iframe>
   </div>
   <div class="responsive-frame visible-phone">
-    <iframe src="https://calendar.google.com/calendar/embed?height=500&wkst=2&bgcolor=%23ffffff&ctz=America%2FVancouver&mode=AGENDA&showCalendars=0&showTabs=0&showPrint=0&showDate=0&showNav=0&src=bWw1cjNvbm1kOHI1aW9saGdtbnE0azZuYjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F4511E" style="border:solid 1px #777; max-width:75ch" height="500" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?height=500&wkst=2&bgcolor=%23ffffff&ctz=America%2FVancouver&mode=AGENDA&showCalendars=0&showTabs=0&showPrint=0&showDate=0&showNav=0&src=bWw1cjNvbm1kOHI1aW9saGdtbnE0azZuYjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F4511E" style="border:solid 1px #777; max-width:75ch" height="500"></iframe>
   </div>
 </section>
 <section id="events" class="outer-2-col">
@@ -176,7 +176,7 @@ flavor: Something sweet is coming!
             description: event.description
         }) %>
     <% }) %>
-    </ul>
+    </ol>
 </section>
 <section id="faq" class="outer-2-col">
   <%- include('_includes/heading.ejs', {
